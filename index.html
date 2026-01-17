@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personajes de Dragon Ball Z</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="db-app">
+        <header class="db-header">
+            <img src="./images/dragon-ball-z.png" alt="Dragon Ball Z Logo" class="db-logo">
+            <div class="db-stats">
+                <span id="favCount">Favoritos: 0</span>
+            </div>
+        </header>
+
+        <!--Contenedor para los personajes-->
+        <section id="characterList" class="db-grid"></section>
+
+        <nav class="db-pagination">
+            <button id="firstPage" class="db-btn"></button>
+            <button id="prevPage" class="db-btn"></button>
+
+            <div class="db-page-info">
+                Página <span id="currentPage">1</span> de <span id="totalPages">...</span>
+            </div>
+
+            <button id="nextPage" class="db-btn">Siguiente</button>
+            <button id="lastPage" class="db-btn">Último</button>
+        </nav>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+    background-color: #1a1a1a;
+    /* Fondo oscuro tipo espacio */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.db-app {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/*Encabezado*/
+
+.db-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.db-logo {
+    width: 10rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #ff8000;
+    border-radius: 20px;
+    padding: 0.1rem 1rem;
+
+}
+
+/*Caja de Personajes*/
+
+.db-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*Tarjeta de personaje*/
+
+.character-card {
+    background: #2a2a2a;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #444;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff8000;
+}
+
+.character-img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: contain;
+    /*Mantiene su relacion aspecto original dentro de su contendor*/
+    
+    background: #333;
+    padding: 1rem;
+}
+
+.character-info {
+    text-align: center;
+    padding: 1rem;
+}
+
+.character-info h2 {
+  color: #ff8000;
+  margin: 0.5rem 0;
+}
+
+.character-info p {
+  margin: 0.2rem 0;
+  color: #ccc;
+}
+
+/* Botón de Favorito */
+.btn-fav {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #555; 
+}
+
+.btn-fav:hover {
+  transform: scale(1.2); 
+  /*Escala a un tamaño de 20% más de su tamaño original*/
+}
+
+.btn-fav.is-favorite {
+  color: #d00000; /* Corazón rojo si es favorito */
+  filter: drop-shadow(0 0 5px #d00000);
+}
+
+/* Paginación */
+.db-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  flex-wrap: wrap;/*Saltara a una nueva linea cuando no haya mas espacio horizontal*/
+}
+
+.db-btn {
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.db-btn:hover {
+  background-color: #cc6600;
+}
+
+.db-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.db-page-info {
+  font-size: 1.1rem;
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
